@@ -1,12 +1,12 @@
-package com.study;
+package com.study.lambda;
 
 import java.util.function.*;
 
-public class LambdaFunction {
+public class App {
     public static void main(String[] args) {
         // 람다 표현식
         // 변수 캡쳐 : 람다를 감싸고 있는 영역에 있는 지역 변수(local valuable)
-        LambdaFunction foo3 = new LambdaFunction();
+        App foo3 = new App();
         foo3.run();
     }
 

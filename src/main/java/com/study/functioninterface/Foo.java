@@ -1,7 +1,7 @@
-package com.study;
+package com.study.functioninterface;
 
 @java.lang.FunctionalInterface
-public interface FunctionalInterface {
+public interface Foo {
 
     // 추상메서드가 하나만 있으면 함수형 인터페이스이다. 하나 이상이 되면 함수형 인터페이스가 아니다.
     abstract int doIt(int number);

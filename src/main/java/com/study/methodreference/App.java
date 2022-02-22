@@ -1,11 +1,13 @@
-package com.study;
+package com.study.methodreference;
+
+import com.study.interfacemethod.Greeting;
 
 import java.util.Arrays;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-public class MethodRefefrence {
+public class App {
     public static void main(String[] args) {
         // method reference 는 구현체를 직접 구현하지 않고, 참조하여 사용하는 방법을 말한다.
         // :: 콜론이 2개이면 method reference.

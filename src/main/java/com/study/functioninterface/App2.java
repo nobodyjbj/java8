@@ -1,8 +1,8 @@
-package com.study;
+package com.study.functioninterface;
 
 import java.util.function.*;
 
-public class DefaultFunctionInterface {
+public class App2 {
     public static void main(String[] args) {
         // 주요한 함수형 인터페이스 : https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
 
