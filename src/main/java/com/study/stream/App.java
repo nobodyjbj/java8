@@ -58,7 +58,7 @@ public class App {
         // 5. 병렬처리를 쉽게 할 수 있다.
         // 반복문
         for (String name : names) {
-            if (name.startsWith("k")) {
+            if (name.startsWith("i")) {
                 System.out.println(name.toUpperCase());
             }
         }
