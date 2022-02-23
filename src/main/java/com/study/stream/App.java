@@ -51,7 +51,7 @@ public class App {
         }).collect(Collectors.toList()); // 종료 오퍼레이터를 사용
         collect.forEach(System.out::println);
 
-        System.out.println("===========");
+        System.out.println("===========+++++");
 
         names.forEach(System.out::println);
 
