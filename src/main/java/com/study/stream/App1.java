@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class App {
+public class App1 {
     public static void main(String[] args) {
         /* 1. 데이터를 담는 저장소가 아니다.
            2. 근본적으로 Functional 하다. 소스를 변경하지 않는다.
