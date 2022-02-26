@@ -1,17 +1,19 @@
 package com.study.interfacemethod;
 
 public interface Foo {
+    // 인터페이스에서는 기본, default, setter, getter, static 메서드 등을 정의할 수 있다.
 
     void printName();
 
     /**
      * @implSpec 이 구현체는 getName()으로 가져온 문자열을 바꿔 출력한다.
+     * 위의 주석은 Java8에서 추가된 인터페이스 메서드를 설명할 때 사용한다.
      */
     default void printNameUpperCase() {
         System.out.println(this.getName().toUpperCase());
     }
 
-    // Object의 method들은 재정의 할 수 없다.
+    // Object Class 의 method들은 재정의 할 수 없다. equals(), hashcode(), toString() 등등...
 
     String getName();
 
