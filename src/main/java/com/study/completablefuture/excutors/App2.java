@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 public class App2 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         /* Runnable 은 void 이기 때문에 어떤 결과물을 가져올 수 없다. 그래서 결과물(리턴값)을 가져오기 위해서는 Java8의 Callable 을 사용한다.
-           Callable 의 리턴을 Feature 로 받을 수 있다.
+           Callable 의 리턴을 Future 로 받을 수 있다.
          */
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
@@ -16,14 +16,14 @@ public class App2 {
             return "Hello";
         };
 
-        // 리턴하는 타입의 Feature 를 만들 수 있다.
-        Future<String> helloFeature = executorService.submit(hello);
-        System.out.println(helloFeature.isDone()); // 끝났으면 true, 아직 안끝났으면 false
+        // 리턴하는 타입의 Future 를 만들 수 있다.
+        Future<String> helloFuture = executorService.submit(hello);
+        System.out.println(helloFuture.isDone()); // 끝났으면 true, 아직 안끝났으면 false
         System.out.println("Started!");
 
-        helloFeature.get(); // blocking call, 결과값을 가져올때까지 기다린다.
+        helloFuture.get(); // blocking call, 결과값을 가져올때까지 기다린다.
         // true 를 주면 종료, false 는 기다린다. cancel() 다음에는 get()으로 결과값을 가져올 수 없다.
-        helloFeature.cancel(true);
+        helloFuture.cancel(true);
 
         System.out.println("End!");
         executorService.shutdown();
